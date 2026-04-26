@@ -1,0 +1,26 @@
+.mode_switch {
+    max-width: 512px;
+    width: 95%;
+    margin: 0.5rem auto;
+    padding: 0.75rem 1rem;
+
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: lightgray;
+    border: 2px solid #9ca3af;
+    border-radius: 1rem;
+}
+
+.mode_switch_label {
+    font-weight: bold;
+}
+
+.mode_switch label {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+}

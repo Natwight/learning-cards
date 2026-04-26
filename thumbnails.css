@@ -1,0 +1,146 @@
+/*タブの箱設定*/
+.tabs {
+    max-width: 512px;
+    width: 95%;
+    margin: 0.5rem auto;
+}
+
+/*大タブボタン*/
+.big_tabs_buttons {
+    display: flex;
+    margin: 0 auto;
+}
+
+/*大タブボタンの文字*/
+.big_tabs_buttons button {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: clamp(10px, 2vw, 14px);
+    padding: 0.5rem 0.3rem;
+    line-height: 1.2;
+
+    white-space: normal; /*改行を許す*/
+    word-break: keep-all; /*単語を変に途中で切りにくくする*/
+    text-align: center;
+
+    background-color: #6d7280;
+    color: #e5e7eb;
+    border: 2px solid #9ca3af;
+    border-radius: 1rem 1rem 0 0;
+
+    cursor: pointer;
+}
+
+/*選択中の大タブの見た目*/
+.big_tabs_buttons button.active {
+    background: lightgray;
+    color: black;
+}
+
+/*小タブボタン*/
+.tabs_buttons {
+    display: flex;
+    margin: 0 auto;
+    background-color: lightgray;
+    border-left: 2px solid #9ca3af;
+    border-right: 2px solid #9ca3af;
+    padding: 0.5rem 0.5rem 0;
+}
+
+/*タブボタンの文字*/
+.tabs_buttons button {
+    flex: 1; /*親(tabs)の横幅を均等に分けて配置する*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: clamp(12px, 2.5vw, 16px); /*最小12px⇔最大20px*/
+    padding: 0.35rem 0.2rem;
+    line-height: 1.2;
+
+    white-space: normal;
+    word-break: keep-all;
+    text-align: center;
+
+    min-height: 3rem;
+
+    background-color: #6d7280; /*背景色*/
+    color: #e5e7eb; /*文字色*/
+    border: 2px solid #9ca3af;
+    border-bottom: none;
+    border-radius: 1rem 1rem 0 0; /*丸角設定*/
+
+    cursor: pointer; /*マウスカーソル*/   
+}
+
+/*サムネイル表示エリア*/
+.tabs_content {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    /*横列を5列に指定し、各セルを均等(1fr)に配置する*/
+    /*縦行を指定しない場合、6つ目の要素は2行目の左端に自動的に割り振られる*/
+
+    place-items: center; /*各セルすべて中央配置 - グリッドレイアウトの中で使える中央配置*/
+
+    gap: 0.5rem; /*要素(画像)間に一定の距離を設ける*/
+
+    background-color: lightgray; /*背景色*/
+    padding: 0.5rem; /*グリッドレイアウトの*内側に余白(box-sizingで設定のため)*/
+    border: 2px solid #9ca3af; /*枠線*/
+    border-top: none; /*枠線上なし*/
+    border-radius: 0 0 1rem 1rem; /*丸角*/
+
+}
+
+/*選択中タブの見た目を変える*/
+.tabs_buttons button.active {
+    background: lightgray;
+    color: black;
+    border-bottom: none;
+}
+
+/*各サムネイル用画像の詳細*/
+.tabs_content img {
+    width: 100%;
+    /*親要素(grid)で指定されたセルの画像配置エリアに対しての横幅割合設定*/
+    /*100%は横エリア全体を使う*/
+    height: auto;
+    object-fit: contain; /*画像の全体表示*/
+
+    border: 2px solid #6d7280;
+    border-radius: 0.5rem; /*丸角*/
+    cursor: pointer;
+    /*マウスカーソルをポインタに変更する*/
+    transition: transform 0.2s ease;
+    /*状態の変化(マウスカーソルが乗った時)を滑らかにする, 0.2秒かけて変化*/
+}
+
+/*空のサムネイル表示*/
+.empty_thumbnail {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 0.5rem;
+    background-color: #f3f4f6;
+    border: 2px dashed #9ca3af;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #6b7280;
+    font-size: clamp(10px, 2vw, 14px);
+}
+
+
+/*マウスカーソルを要素に乗せた時の状態を指定*/
+.tabs_content img:hover {
+    transform: scale(1.05); /*1.05倍に拡大する*/
+    outline: 3px solid #3b82f6; /*枠線を付ける, outlineは画像サイズに影響しない*/
+    outline-offset: 1px; /*枠線を要素(画像)から外側にずらす*/
+}

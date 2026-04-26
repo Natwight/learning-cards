@@ -1,0 +1,21 @@
+html, body {
+    overscroll-behavior: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif; /*フォント ゴシック系(飾り無し)*/
+}
+
+/*CSSすべての要素に適用*/
+*, *::before, *::after {
+    box-sizing: border-box; /*paddingとborderの幅をcontent(中身)に含める*/
+}
+
+p {
+    text-align: center;
+    margin: 0.5rem auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html> <!-- この文書はHTML5ですとブラウザへ宣言 -->
+<html lang="ja">  <!-- 文書の言語が日本語であると示す -->
+<head>
+  <meta charset="UTF-8">  <!-- 文字コードを指定するタグ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- スマホ対応のコード -->
+
+  <title>Word meaning test</title> <!-- ページのタイトル -->
+  
+  <link rel="stylesheet" href="base.css">  <!-- CSSファイルの読み込み -->
+  <link rel="stylesheet" href="viewer.css">
+  <link rel="stylesheet" href="mode-switch.css">
+  <link rel="stylesheet" href="thumbnails.css">
+
+  <meta name="description" content="このサイトの説明">
+  <!-- サイトの説明文(余裕があれば), 検索結果の説明になる -->
+
+</head>
+<body>
+
+  <p>Word Meaning Test</p>
+
+  <!-- 拡大画像表示エリア構成 -->
+  <div id="viewer" class="viewer">
+    
+    <!-- 前へボタン -->
+    <button type="button" id="prevBtn" class="prevBtn">
+      <span>＜</span>
+    </button>
+    
+    <!-- 拡大画像と文字の表示エリア構成 -->
+    <div class="viewer_imagesTexts">
+      
+      <!-- ページ数表示 -->
+      <div class="viewer_imagesTexts_page">
+        <div>
+          <span id="page"></span> / <span id="pageAll"></span>
+        </div>
+      </div>
+      
+      <!-- 拡大画像表示 -->
+      <img id="mainImage" alt="">
+      <div class="viewer_hint" id="viewerHint">Click the image to reveal</div>
+      
+      <!-- 単語の表示エリア構成 -->
+      <div class="viewer_imagesTexts_text">
+        <span>English</span>
+        <span class="colon">:</span>
+        <strong id="word" class="info_value"></strong>
+      </div>
+      
+      <!-- 意味の表示エリア構成 -->
+      <div class="viewer_imagesTexts_text">
+        <span>Japanese</span>
+        <span class="colon">:</span>
+        <strong id="meaning" class="info_value"></strong>
+      </div>
+      
+      <!-- 補足1の表示エリア構成 -->
+      <div class="viewer_imagesTexts_text">
+        <span>Info 1</span>
+        <span class="colon">:</span>
+        <strong id="info1" class="info_value"></strong>
+      </div>
+
+      <!-- 補足2の表示エリア構成 -->
+      <div class="viewer_imagesTexts_text">
+        <span>Info 2</span>
+        <span class="colon">:</span>
+        <strong id="info2" class="info_value"></strong>
+      </div>
+
+    </div>
+
+    <!-- 次へボタン -->
+    <button type="button" id="nextBtn" class="nextBtn">
+      <span>＞</span>
+    </button>
+  </div>
+
+  <div class="mode_switch">
+    <span class="mode_switch_label">Display Mode</span>
+
+    <label>
+      <input type="radio" name="displayMode" value="normal" checked>
+      Normal
+    </label>
+
+    <label>
+      <input type="radio" name="displayMode" value="hidden">
+      Hidden
+    </label>
+  </div>
+
+
+
+
+  <!-- タブエリア -->
+  <div class="tabs">
+
+    <!-- 大タブ -->
+    <nav class="big_tabs_buttons">
+      <button type="button" data-big="big1" class="active">Category1</button>
+      <button type="button" data-big="big2">Category2</button>
+      <button type="button" data-big="big3">Category3</button>
+      <button type="button" data-big="big4">Category4</button>
+      <button type="button" data-big="big5">Category5</button>
+    </nav>
+
+    <!-- 小タブ -->
+    <nav class="tabs_buttons">
+      <button type="button" data-group="group1" class="active">Group1</button>
+      <button type="button" data-group="group2">Group2</button>
+      <button type="button" data-group="group3">Group3</button>
+      <button type="button" data-group="group4">Group4</button>
+      <button type="button" data-group="group5">Group5</button>
+    </nav>
+
+    <!-- サムネイル表示エリア -->
+    <section id="thumbnails" class ="tabs_content"></section>
+    <!-- section - 1つの内容のまとまりに使われるタグ -->
+    <!-- class="tab-content content1" - 2つのクラス(tab-contentとcontent1)を持つ -->
+    <!-- classには複数のクラスを同時に持たすことが可能 -->
+  </div>
+
+  <script src="app.js"></script> <!-- Javascriptファイルの読み込み -->
+</body>
+
+</html>
