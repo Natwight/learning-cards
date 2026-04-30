@@ -1,73 +1,134 @@
-<!DOCTYPE html> <!-- この文書はHTML5ですとブラウザへ宣言 -->
-<html lang="ja">  <!-- 文書の言語が日本語であると示す -->
+<!DOCTYPE html> <!-- この文書はHTML5で書かれていることをブラウザへ伝える宣言 -->
+<html lang="ja"> <!-- このページの主な言語が日本語であることを示す -->
+
 <head>
-  <meta charset="UTF-8">  <!-- 文字コードを指定するタグ -->
+  <meta charset="UTF-8"> <!-- 文字コードをUTF-8に指定。日本語の文字化け防止 -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- スマホ対応のコード -->
+  <!-- 
+    スマホ対応に必要な設定。
+    width=device-width : 画面幅に合わせる
+    initial-scale=1.0 : 初期表示倍率を1倍にする
+  -->
 
-  <title>Word meaning test</title> <!-- ページのタイトル -->
-  
-  <link rel="stylesheet" href="base.css">  <!-- CSSファイルの読み込み -->
-  <link rel="stylesheet" href="viewer.css">
-  <link rel="stylesheet" href="mode-switch.css">
-  <link rel="stylesheet" href="thumbnails.css">
+  <title>English Word Cards</title> <!-- ブラウザのタブに表示されるタイトル -->
 
-  <meta name="description" content="このサイトの説明">
-  <!-- サイトの説明文(余裕があれば), 検索結果の説明になる -->
+  <!-- CSSファイルの読み込み -->
+  <link rel="stylesheet" href="base.css"> <!-- 全体共通の基本スタイル -->
+  <link rel="stylesheet" href="viewer.css"> <!-- メイン表示エリア用スタイル -->
+  <link rel="stylesheet" href="mode-switch.css"> <!-- 表示モード切替用スタイル -->
+  <link rel="stylesheet" href="thumbnails.css"> <!-- タブ・サムネイル用スタイル -->
 
+  <!-- 
+    必要になったらサイト説明を入れる場所。
+    検索結果などに使われることがある。
+  -->
+  <!-- <meta name="description" content="English word card learning app"> -->
 </head>
+
 <body>
 
-  <p>Word Meaning Test</p>
+  <!-- アプリタイトル -->
+  <p>English Word Cards</p>
 
-  <!-- 拡大画像表示エリア構成 -->
+  <!-- 
+    メインビューア全体。
+    左に「前へ」ボタン、中央に画像・単語情報、右に「次へ」ボタンを置く。
+  -->
   <div id="viewer" class="viewer">
-    
+
     <!-- 前へボタン -->
     <button type="button" id="prevBtn" class="prevBtn">
       <span>＜</span>
     </button>
-    
-    <!-- 拡大画像と文字の表示エリア構成 -->
-    <div class="viewer_imagesTexts">
-      
-      <!-- ページ数表示 -->
-      <div class="viewer_imagesTexts_page">
+
+    <!-- 
+      中央の表示エリア。
+      以前の viewer_imagesTexts を、より意味が広い viewer_content に変更。
+      今後、音声ボタン・お気に入り・学習状態などが入っても名前が自然。
+    -->
+    <div class="viewer_content">
+
+      <!-- 
+        ページ数表示エリア。
+        例: 1 / 22 のように表示する。
+      -->
+      <div class="viewer_page">
         <div>
-          <span id="page"></span> / <span id="pageAll"></span>
+          <span id="currentPage"></span> / <span id="totalPage"></span>
         </div>
       </div>
-      
-      <!-- 拡大画像表示 -->
-      <img id="mainImage" alt="">
-      <div class="viewer_hint" id="viewerHint">Click the image to reveal</div>
-      
-      <!-- 単語の表示エリア構成 -->
-      <div class="viewer_imagesTexts_text">
-        <span>English</span>
-        <span class="colon">:</span>
-        <strong id="word" class="info_value"></strong>
-      </div>
-      
-      <!-- 意味の表示エリア構成 -->
-      <div class="viewer_imagesTexts_text">
-        <span>Japanese</span>
-        <span class="colon">:</span>
-        <strong id="meaning" class="info_value"></strong>
-      </div>
-      
-      <!-- 補足1の表示エリア構成 -->
-      <div class="viewer_imagesTexts_text">
-        <span>Info 1</span>
-        <span class="colon">:</span>
-        <strong id="info1" class="info_value"></strong>
+
+      <!-- 
+        画像表示エリア。
+        img とヒント表示をまとめて包むことで、
+        ヒントを画像に重ねたり、画像下に配置したりしやすくする。
+      -->
+      <div class="viewer_imageArea">
+
+        <!-- 
+          メイン画像。
+          JavaScriptで src と alt を差し替える。
+          id="mainImage" は十分明確なのでそのまま使う。
+        -->
+        <img id="mainImage" alt="">
+
+        <!-- 
+          Hiddenモード時のヒント表示。
+          JavaScriptで is-hidden クラスを付け外しして表示切替する。
+        -->
+        <div class="viewer_hint" id="viewerHint">
+          Click the image to reveal
+        </div>
+
       </div>
 
-      <!-- 補足2の表示エリア構成 -->
-      <div class="viewer_imagesTexts_text">
-        <span>Info 2</span>
-        <span class="colon">:</span>
-        <strong id="info2" class="info_value"></strong>
+      <!-- 
+        操作ボタン用エリア。
+        今は空でもOK。
+        後でここに音声ボタンを入れる予定。
+        
+        例:
+        <button type="button" id="speakBtn" class="speakBtn">
+          🔊 Listen
+        </button>
+      -->
+      <div class="viewer_actionArea"></div>
+
+      <!-- 
+        単語情報の一覧エリア。
+        English / Japanese / Info 1 / Info 2 をまとめる。
+      -->
+      <div class="viewer_infoList">
+
+        <!-- 英単語表示 -->
+        <div class="viewer_infoRow">
+          <span class="info_label">English</span>
+          <span class="colon">:</span>
+          <strong id="englishWord" class="info_value"></strong>
+        </div>
+
+        <!-- 日本語意味表示 -->
+        <div class="viewer_infoRow">
+          <span class="info_label">Japanese</span>
+          <span class="colon">:</span>
+          <strong id="japaneseMeaning" class="info_value"></strong>
+        </div>
+
+        <!-- 補足情報1 -->
+        <div class="viewer_infoRow">
+          <span class="info_label">Info 1</span>
+          <span class="colon">:</span>
+          <strong id="extraInfo1" class="info_value"></strong>
+        </div>
+
+        <!-- 補足情報2 -->
+        <div class="viewer_infoRow">
+          <span class="info_label">Info 2</span>
+          <span class="colon">:</span>
+          <strong id="extraInfo2" class="info_value"></strong>
+        </div>
+
       </div>
 
     </div>
@@ -76,9 +137,16 @@
     <button type="button" id="nextBtn" class="nextBtn">
       <span>＞</span>
     </button>
+
   </div>
 
+  <!-- 
+    表示モード切替エリア。
+    Normal : 英語・日本語・補足を最初から表示
+    Hidden : 最初は答えを隠し、画像クリックで表示
+  -->
   <div class="mode_switch">
+
     <span class="mode_switch_label">Display Mode</span>
 
     <label>
@@ -90,15 +158,20 @@
       <input type="radio" name="displayMode" value="hidden">
       Hidden
     </label>
+
   </div>
 
-
-
-
-  <!-- タブエリア -->
+  <!-- 
+    タブエリア全体。
+    大カテゴリタブ、小グループタブ、サムネイル一覧をまとめる。
+  -->
   <div class="tabs">
 
-    <!-- 大タブ -->
+    <!-- 
+      大カテゴリタブ。
+      data-big の値をJavaScriptで読み取り、
+      category1.json などの読み込み先を切り替える。
+    -->
     <nav class="big_tabs_buttons">
       <button type="button" data-big="big1" class="active">Category1</button>
       <button type="button" data-big="big2">Category2</button>
@@ -107,7 +180,11 @@
       <button type="button" data-big="big5">Category5</button>
     </nav>
 
-    <!-- 小タブ -->
+    <!-- 
+      小グループタブ。
+      data-group の値をJavaScriptで読み取り、
+      JSON内の group1 〜 group5 を切り替える。
+    -->
     <nav class="tabs_buttons">
       <button type="button" data-group="group1" class="active">Group1</button>
       <button type="button" data-group="group2">Group2</button>
@@ -116,14 +193,16 @@
       <button type="button" data-group="group5">Group5</button>
     </nav>
 
-    <!-- サムネイル表示エリア -->
-    <section id="thumbnails" class ="tabs_content"></section>
-    <!-- section - 1つの内容のまとまりに使われるタグ -->
-    <!-- class="tab-content content1" - 2つのクラス(tab-contentとcontent1)を持つ -->
-    <!-- classには複数のクラスを同時に持たすことが可能 -->
+    <!-- 
+      サムネイル表示エリア。
+      JavaScriptで img 要素を作成して、この中に追加する。
+    -->
+    <section id="thumbnails" class="tabs_content"></section>
+
   </div>
 
-  <script src="app.js"></script> <!-- Javascriptファイルの読み込み -->
-</body>
+  <!-- JavaScriptファイルの読み込み。bodyの最後で読み込むとHTML要素取得が安定しやすい -->
+  <script type="module" src="js/app.js"></script>
 
+</body>
 </html>

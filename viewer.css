@@ -1,107 +1,247 @@
-/*拡大画像等の表示全体エリア設定*/
-.viewer {
-    max-width: 512px; /*横幅最大512pxまでとする(PCなどで適用)*/
-    width: 95%; /*横幅は全体(body)の95%のサイズで表示*/
-    aspect-ratio: 1/1.2; /*箱の横縦の比率設定, 横1に対して縦1.2*/
-    margin: 0.5rem auto; /*上下に1remの空白エリアを設け、左右は中央配置*/
+/* ==============================
+   メインビューア全体
+   ============================== */
 
-    /*子要素(拡大画像やテキスト等)の配置設計*/
-    display: grid; /*グリッドレイアウト指定*/
-    grid-template-columns: 8% minmax(0,1fr) 8%; /*8%分のエリア 残りのエリア 8%分エリア*/
+/* 拡大画像・単語情報・前後ボタンを含む全体エリア */
+.viewer {
+    max-width: 512px; /* PCなど広い画面でも横幅は最大512pxまで */
+    width: 95%; /* スマホでは画面幅の95%を使用 */
+
+    /*
+      高さは固定しない。
+      画像・情報欄・音声ボタン予定地の内容に合わせて自然に伸ばす。
+    */
+    height: auto;
+
+    margin: 0.5rem auto;
+
+    /*
+      左：前へボタン
+      中央：画像・単語情報
+      右：次へボタン
+    */
+    /*
+      左右ボタンはスマホで押しやすい幅にする。
+      clamp(2.75rem, 12vw, 4rem)
+      - 最小 2.75rem
+      - 基本 画面幅の12%
+      - 最大 4rem
+    */
+    display: grid;
+    grid-template-columns:
+        clamp(2.75rem, 12vw, 4rem)
+        minmax(0, 1fr)
+        clamp(2.75rem, 12vw, 4rem);
 
     overflow: hidden;
-    /*箱の中の要素がはみ出しても箱を伸ばさない - 親の箱のサイズを視認や守るためにも書いておくべき*/
 
-    border-radius: 1rem; /*丸角*/
-    background-color: lightgray; /*背景色の指定*/
+    border-radius: 1rem;
+    background-color: lightgray;
 }
 
-/*prev/next用ボタンの詳細*/
+
+/* ==============================
+   前へ / 次へボタン
+   ============================== */
+
+/* viewer内の前後ボタン共通設定 */
 .viewer button {
     align-self: stretch;
-    /*親の高さまでこの要素を縦に最大まで広げる - デフォルトでこの設定なので本来書かなくても構わない*/
-    
-    /*ボタン文字の中央配置*/
-    display: flex; /*フレックスレイアウト指定*/
-    justify-content: center; /*子要素すべての横配置決め*/
-    align-items: center; /*子要素すべての縦配置決め*/
 
-    background: rgba(0,0,0,0.4);    /*ボタンの背景色, 黒の40%*/
-    color: white;   /*文字の色*/
-    border: none;   /*枠線なし*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    font-size: 1.5rem; /*基準のフォントサイズ(基本16px)に対しての文字サイズ設定(1rem : 1倍)*/
-    font-weight: bold; /*太字設定*/
-    
-    cursor: pointer; /*マウスカーソルをポインタに変化*/
+    /*
+      スマホ操作時の誤反応を少し減らす。
+      ボタン内の文字選択やダブルタップ時の癖を抑える。
+    */
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+    font-weight: bold;
+
+    cursor: pointer;
 }
 
-/*拡大画像等の表示メインエリア設定*/
-.viewer_imagesTexts {
-    display: grid; /*グリッドレイアウト指定*/
-    grid-template-rows: auto auto auto 1fr 1fr 1fr 1fr;
-    /*残りのエリアの1/5分のエリア*/
-    /*自動配置*/
-    /*残りのエリアの1/5分のエリア*/
-    /*残りのエリアの1/5分のエリア*/
-    /*残りのエリアの1/5分のエリア*/
-    
-    padding-left : 0.5rem;
-    padding-right: 0.5rem;
-    gap: 0.0rem;
+/* 矢印の表示を少し大きくして中央に置く */
+.viewer button span {
+    display: inline-block;
+    line-height: 1;
 }
 
-/*ページ数表示*/
-.viewer_imagesTexts_page {
-    display: flex; /*フレックスレイアウト*/
-    justify-content: center; /*子要素の横中央配置*/
-    align-items: center; /*子要素の縦中央配置*/
+/* マウスを乗せたとき */
+.viewer button:hover {
+    background: rgba(0, 0, 0, 0.55);
 }
 
-/*拡大画像*/
-.viewer_imagesTexts img {
-    width: 100%; /*親で用意された領域に対して95%のエリアを使用*/
-    aspect-ratio: 1/1;
-    object-fit: contain; /*画像は全体像が収まるように調整*/
 
-    justify-self: center; /*横中央配置 - グリッドレイアウトの中身に対してだけの配置決め(主軸)*/
-    align-self: center; /*縦中央配置 - グリッドレイアウトの中身に対してだけの配置決め(副軸)*/
+/* ==============================
+   中央コンテンツ全体
+   ============================== */
 
-    border-radius: 1rem; /*丸角*/
+.viewer_content {
+    display: grid;
+
+    /*
+      各エリアは中身に合わせる。
+      画像エリアだけを無理に1frで伸ばさない。
+    */
+    grid-template-rows: auto auto auto auto;
+
+    gap: clamp(0.25rem, 1.5vw, 0.5rem);
+    padding: clamp(0.35rem, 2vw, 0.5rem);
+
+    min-width: 0;
+}
+
+
+/* ==============================
+   ページ数表示
+   ============================== */
+
+.viewer_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-weight: bold;
+}
+
+
+/* ==============================
+   画像エリア
+   ============================== */
+
+.viewer_imageArea {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    min-width: 0;
+}
+
+/* メイン画像 */
+.viewer_imageArea img {
+    /*
+      ブラウザ表示サイズに応じて画像サイズを変える。
+      
+      12rem : 最小サイズ
+      65vw  : 画面幅の65%
+      20rem : 最大サイズ
+    */
+    width: clamp(12rem, 65vw, 20rem);
+
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+
+    border-radius: 1rem;
     background-color: #f3f4f6;
 }
 
-/*単語,意味,補足表示*/
-.viewer_imagesTexts_text {
-    display: grid; /*グリッドレイアウト*/
-    grid-template-columns: 30% 5% auto;
-    justify-content: left; /*子要素の左詰め*/
-    align-items: center; /*子要素の縦中央配置*/
-    
-    text-indent: 0.5rem; /*文字の頭に少し空白を入れる*/
-    border-bottom: 2px solid black;
-}
+
+/* ==============================
+   Hiddenモード時のヒント
+   ============================== */
 
 .viewer_hint {
-    margin-top: -2rem;
-    padding: 0.2rem 0.6rem;
+    position: absolute;
+    left: 50%;
+    bottom: clamp(0.35rem, 1.5vw, 0.5rem);
+    transform: translateX(-50%);
+
+    width: max-content;
+    max-width: 90%;
+
+    padding: 0.25rem 0.7rem;
+
     text-align: center;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
-    background-color: rgba(0,0,0,0.35);
+    font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+
+    color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(0, 0, 0, 0.4);
+
+    border-radius: 999px;
+
     pointer-events: none;
 }
 
+/* ヒントを見えなくする */
 .viewer_hint.is-hidden {
     visibility: hidden;
 }
 
-.colon {
-    text-indent: 0; /*コロンは頭の空白なし*/
-    justify-self: center;
+
+/* ==============================
+   操作エリア
+   ============================== */
+
+/*
+  音声ボタンなどを置く予定の場所。
+  空の段階では高さを取りすぎない。
+*/
+.viewer_actionArea {
+    min-height: clamp(1.2rem, 5vw, 2rem);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.info_value.is-hidden { /*info_valueとis-hiddenの両方のクラスを持つものが対象*/
+
+/* ==============================
+   単語情報エリア
+   ============================== */
+
+.viewer_infoList {
+    display: grid;
+    gap: clamp(0.1rem, 1vw, 0.25rem);
+}
+
+/* 1行分の情報表示 */
+.viewer_infoRow {
+    display: grid;
+    grid-template-columns: 30% 5% minmax(0, 1fr);
+
+    align-items: center;
+
+    padding: clamp(0.15rem, 1vw, 0.25rem) 0;
+
+    border-bottom: 2px solid black;
+
+    font-size: clamp(0.85rem, 2.8vw, 1rem);
+}
+
+/* 左側のラベル部分 */
+.info_label {
+    text-indent: 0.5rem;
+    font-weight: bold;
+}
+
+/* コロン部分 */
+.colon {
+    justify-self: center;
+    text-indent: 0;
+}
+
+/* 英単語・日本語・補足の値部分 */
+.info_value {
+    min-width: 0;
+
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+/* Hiddenモード時、答え部分を隠す */
+.info_value.is-hidden {
     visibility: hidden;
 }
-
