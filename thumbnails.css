@@ -39,6 +39,7 @@
 .big_tabs_buttons button.active {
     background: lightgray;
     color: black;
+    border-bottom: none; /* 選択中タブの下線を消す */
 }
 
 /*小タブボタン*/

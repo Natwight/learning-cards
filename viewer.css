@@ -127,6 +127,44 @@
     place-items: center;
 
     min-width: 0;
+
+    touch-action: pan-y;
+}
+
+/* 次のカードへ移動した時 */
+.viewer_imageArea.is-slide-next img {
+    animation: slideNext 0.22s ease;
+}
+
+/* 前のカードへ移動した時 */
+.viewer_imageArea.is-slide-prev img {
+    animation: slidePrev 0.22s ease;
+}
+
+/* 次へ：右側から軽く入ってくる */
+@keyframes slideNext {
+    from {
+        opacity: 0;
+        transform: translateX(1.5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 前へ：左側から軽く入ってくる */
+@keyframes slidePrev {
+    from {
+        opacity: 0;
+        transform: translateX(-1.5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* メイン画像 */

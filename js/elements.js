@@ -38,3 +38,6 @@ export const englishWord = document.getElementById("englishWord");
 export const japaneseMeaning = document.getElementById("japaneseMeaning");
 export const extraInfo1 = document.getElementById("extraInfo1");
 export const extraInfo2 = document.getElementById("extraInfo2");
+
+// 画像表示エリア
+export const viewerImageArea = document.querySelector(".viewer_imageArea");

@@ -10,6 +10,7 @@ import {
     modeRadios,
     thumbnails,
     mainImage,
+    viewerImageArea,
     nextBtn,
     prevBtn
 } from "./elements.js";
@@ -59,6 +60,61 @@ function init() {
 // イベント設定
 // ==============================
 
+
+// 次のカードへ移動
+function showNextCard() {
+    if (state.currentImages.length === 0) {
+        return;
+    }
+
+    state.currentIndex = state.currentIndex + 1;
+
+    if (state.currentIndex >= state.currentImages.length) {
+        state.currentIndex = 0;
+    }
+
+    updateViewer();
+    playSlideAnimation("next");
+}
+
+
+// 前のカードへ移動
+function showPrevCard() {
+    if (state.currentImages.length === 0) {
+        return;
+    }
+
+    state.currentIndex = state.currentIndex - 1;
+
+    if (state.currentIndex < 0) {
+        state.currentIndex = state.currentImages.length - 1;
+    }
+
+    updateViewer();
+    playSlideAnimation("prev");
+}
+
+
+// スライドアニメーションを再生
+function playSlideAnimation(direction) {
+    // いったんアニメーション用クラスを外す
+    viewerImageArea.classList.remove("is-slide-next", "is-slide-prev");
+
+    /*
+      同じ方向へ連続で移動した時にも
+      アニメーションを再発火させるための処理。
+    */
+    void viewerImageArea.offsetWidth;
+
+    if (direction === "next") {
+        viewerImageArea.classList.add("is-slide-next");
+    }
+    else if (direction === "prev") {
+        viewerImageArea.classList.add("is-slide-prev");
+    }
+}
+
+
 function setupEvents() {
     // ------------------------------
     // サムネイルクリック
@@ -94,17 +150,7 @@ function setupEvents() {
     // nextボタン
     // ------------------------------
     nextBtn.addEventListener("click", () => {
-        if (state.currentImages.length === 0) {
-            return;
-        }
-
-        state.currentIndex = state.currentIndex + 1;
-
-        if (state.currentIndex >= state.currentImages.length) {
-            state.currentIndex = 0;
-        }
-
-        updateViewer();
+        showNextCard();
     });
 
 
@@ -112,17 +158,7 @@ function setupEvents() {
     // prevボタン
     // ------------------------------
     prevBtn.addEventListener("click", () => {
-        if (state.currentImages.length === 0) {
-            return;
-        }
-
-        state.currentIndex = state.currentIndex - 1;
-
-        if (state.currentIndex < 0) {
-            state.currentIndex = state.currentImages.length - 1;
-        }
-
-        updateViewer();
+        showPrevCard();
     });
 
 
@@ -169,5 +205,54 @@ function setupEvents() {
                 changeMode(radio.value);
             }
         });
+    });
+
+
+    // ------------------------------
+    // 画像エリアのフリック操作
+    // ------------------------------
+
+    // タッチ開始位置
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    // タッチ終了位置
+    let touchEndX = 0;
+    let touchEndY = 0;
+
+    // フリックとして判定する最小距離
+    const swipeMinDistance = 50;
+
+    viewerImageArea.addEventListener("touchstart", (e) => {
+        touchStartX = e.changedTouches[0].clientX;
+        touchStartY = e.changedTouches[0].clientY;
+    });
+
+    viewerImageArea.addEventListener("touchend", (e) => {
+        touchEndX = e.changedTouches[0].clientX;
+        touchEndY = e.changedTouches[0].clientY;
+
+        const diffX = touchEndX - touchStartX;
+        const diffY = touchEndY - touchStartY;
+
+        // 横方向より縦方向の動きが大きい場合は、スクロール操作とみなして何もしない
+        if (Math.abs(diffY) > Math.abs(diffX)) {
+            return;
+        }
+
+        // 動きが短すぎる場合は、フリックではないと判断
+        if (Math.abs(diffX) < swipeMinDistance) {
+            return;
+        }
+
+        // 左フリック → 次へ
+        if (diffX < 0) {
+            showNextCard();
+        }
+
+        // 右フリック → 前へ
+        else {
+            showPrevCard();
+        }
     });
 }
