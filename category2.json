@@ -1,14 +1,121 @@
 {
   "groupLabels": {
-    "group1": "Group 1",
-    "group2": "Group 2",
+    "group1": "Home Appliances",
+    "group2": "Kitchen Tools",
     "group3": "Group 3",
     "group4": "Group 4",
     "group5": "Group 5"
   },
   "groups": {
-    "group1": [],
-    "group2": [],
+    "group1": [
+      { 
+        "src": "images/Home_Appliances/refrigerator.webp",
+        "en": "refrigerator",
+        "ja": "冷蔵庫",
+        "info1": "",
+        "info2": ""
+      },
+      { 
+        "src": "images/Home_Appliances/microwave.webp",
+        "en": "microwave",
+        "ja": "電子レンジ",
+        "info1": "",
+        "info2": ""
+      },
+      { 
+        "src": "images/Home_Appliances/rice_cooker.webp",
+        "en": "rice cooker",
+        "ja": "炊飯器",
+        "info1": "",
+        "info2": ""
+      },
+      { 
+        "src": "images/Home_Appliances/blender.webp",
+        "en": "blender",
+        "ja": "ミキサー",
+        "info1": "",
+        "info2": ""
+      },
+      { 
+        "src": "images/Home_Appliances/washing_machine.webp",
+        "en": "washing machine",
+        "ja": "洗濯機",
+        "info1": "washer",
+        "info2": ""
+      },
+      { 
+        "src": "images/Home_Appliances/dishwasher.webp",
+        "en": "dishwasher",
+        "ja": "食洗機",
+        "info1": "",
+        "info2": ""
+      },
+      { 
+        "src": "images/Home_Appliances/air_purifier.webp",
+        "en": "air purifier",
+        "ja": "空気清浄機",
+        "info1": "",
+        "info2": ""
+      },
+      { 
+        "src": "images/Home_Appliances/humidifier.webp",
+        "en": "humidifier",
+        "ja": "加湿器",
+        "info1": "",
+        "info2": ""
+      },
+      { 
+        "src": "images/Home_Appliances/dehumidifier.webp",
+        "en": "dehumidifier",
+        "ja": "除湿機",
+        "info1": "",
+        "info2": ""
+      }
+    ],
+    "group2": [
+      { 
+        "src": "images/Kitchen_Tools/frying_pan.webp",
+        "en": "frying pan",
+        "ja": "フライパン",
+        "info1": "",
+        "info2": ""
+      },
+      { 
+        "src": "images/Kitchen_Tools/pot.webp",
+        "en": "pot",
+        "ja": "鍋",
+        "info1": "",
+        "info2": ""
+      },
+      { 
+        "src": "images/Kitchen_Tools/ladle.webp",
+        "en": "ladle",
+        "ja": "おたま",
+        "info1": "",
+        "info2": ""
+      },
+      { 
+        "src": "images/Kitchen_Tools/whisk.webp",
+        "en": "whisk",
+        "ja": "泡立て器",
+        "info1": "",
+        "info2": ""
+      },
+      { 
+        "src": "images/Kitchen_Tools/turner.webp",
+        "en": "turner",
+        "ja": "フライ返し",
+        "info1": "spatula",
+        "info2": ""
+      },
+      { 
+        "src": "images/Kitchen_Tools/spatula.webp",
+        "en": "spatula",
+        "ja": "ヘラ",
+        "info1": "rubber spatula",
+        "info2": ""
+      }
+    ],
     "group3": [],
     "group4": [],
     "group5": []

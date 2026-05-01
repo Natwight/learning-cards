@@ -15,8 +15,15 @@ import {
 } from "./elements.js";
 
 import { loadCategoryData } from "./dataLoader.js";
+
 import { renderThumbnails } from "./thumbnails.js";
-import { updateViewer } from "./viewer.js";
+
+import {
+    updateViewer,
+    updateInfoVisibility,
+    updateViewerHint
+} from "./viewer.js";
+
 import { changeMode } from "./mode.js";
 
 import {
@@ -70,8 +77,15 @@ function setupEvents() {
     // Hiddenモード時、画像をクリックすると答えを表示する
     mainImage.addEventListener("click", () => {
         if (state.currentMode === "hidden") {
+        
+            // 答えを表示状態にする
             state.isInfoVisible = true;
-            updateViewer();
+
+            // 単語情報の表示 / 非表示だけ更新する
+            updateInfoVisibility();
+
+            // ヒント表示も更新する
+            updateViewerHint();
         }
     });
 

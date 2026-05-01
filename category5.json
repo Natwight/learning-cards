@@ -8,378 +8,378 @@
   },
   "groups": {
     "group1": [
-        { 
-          "src": "images/Geometry/1_Basic_Shapes/1_circle.jpg",
-          "en": "circle",
-          "ja": "円",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/1_Basic_Shapes/2_oval.jpg",
-          "en": "oval",
-          "ja": "楕円形",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/1_Basic_Shapes/3_triangle.jpg",
-          "en": "triangle",
-          "ja": "三角形",
-          "info1": "equilateral triangle",
-          "info2": "正三角形"
-        },
-        {
-          "src": "images/Geometry/1_Basic_Shapes/4_square.jpg",
-          "en": "square",
-          "ja": "正方形",
-          "info1": "quadrilateral",
-          "info2": "四角形 (総称)"
-        },
-        {
-          "src": "images/Geometry/1_Basic_Shapes/5_rectangle.jpg",
-          "en": "rectangle",
-          "ja": "長方形",
-          "info1": "quadrilateral",
-          "info2": "四角形 (総称)"
-        }
+      { 
+        "src": "images/Geometry/1_Basic_Shapes/circle.webp",
+        "en": "circle",
+        "ja": "円",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/1_Basic_Shapes/oval.webp",
+        "en": "oval",
+        "ja": "楕円形",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/1_Basic_Shapes/triangle.webp",
+        "en": "triangle",
+        "ja": "三角形",
+        "info1": "equilateral triangle",
+        "info2": "正三角形"
+      },
+      {
+        "src": "images/Geometry/1_Basic_Shapes/square.webp",
+        "en": "square",
+        "ja": "正方形",
+        "info1": "quadrilateral",
+        "info2": "四角形 (総称)"
+      },
+      {
+        "src": "images/Geometry/1_Basic_Shapes/rectangle.webp",
+        "en": "rectangle",
+        "ja": "長方形",
+        "info1": "quadrilateral",
+        "info2": "四角形 (総称)"
+      }
     ],
     "group2": [
-        {
-          "src": "images/Geometry/2_Polygons/1_equilateral_triangle.jpg",
-          "en": "equilateral triangle",
-          "ja": "正三角形",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/2_Polygons/2_isosceles_triangle.jpg",
-          "en": "isosceles triangle",
-          "ja": "二等辺三角形",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/2_Polygons/3_right_triangle.jpg",
-          "en": "right triangle",
-          "ja": "直角三角形",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/2_Polygons/4_quadrilateral.jpg",
-          "en": "quadrilateral",
-          "ja": "四角形 (総称)",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/2_Polygons/5_parallelogram.jpg",
-          "en": "parallelogram",
-          "ja": "平行四辺形",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/2_Polygons/6_trapezoid.jpg",
-          "en": "trapezoid",
-          "ja": "台形",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/2_Polygons/7_rhombus.jpg",
-          "en": "rhombus",
-          "ja": "菱形",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/2_Polygons/8_pentagon.jpg",
-          "en": "pentagon",
-          "ja": "五角形",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/2_Polygons/9_hexagon.jpg",
-          "en": "hexagon",
-          "ja": "六角形",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/2_Polygons/10_heptagon.jpg",
-          "en": "heptagon",
-          "ja": "七角形",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/2_Polygons/11_octagon.jpg",
-          "en": "octagon",
-          "ja": "八角形",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/2_Polygons/12_nonagon.jpg",
-          "en": "nonagon",
-          "ja": "九角形",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/2_Polygons/13_decagon.jpg",
-          "en": "decagon",
-          "ja": "十角形",
-          "info1": "",
-          "info2": ""
-        }
+      {
+        "src": "images/Geometry/2_Polygons/equilateral_triangle.webp",
+        "en": "equilateral triangle",
+        "ja": "正三角形",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/2_Polygons/isosceles_triangle.webp",
+        "en": "isosceles triangle",
+        "ja": "二等辺三角形",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/2_Polygons/right_triangle.webp",
+        "en": "right triangle",
+        "ja": "直角三角形",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/2_Polygons/quadrilateral.webp",
+        "en": "quadrilateral",
+        "ja": "四角形 (総称)",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/2_Polygons/parallelogram.webp",
+        "en": "parallelogram",
+        "ja": "平行四辺形",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/2_Polygons/trapezoid.webp",
+        "en": "trapezoid",
+        "ja": "台形",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/2_Polygons/rhombus.webp",
+        "en": "rhombus",
+        "ja": "菱形",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/2_Polygons/pentagon.webp",
+        "en": "pentagon",
+        "ja": "五角形",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/2_Polygons/hexagon.webp",
+        "en": "hexagon",
+        "ja": "六角形",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/2_Polygons/heptagon.webp",
+        "en": "heptagon",
+        "ja": "七角形",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/2_Polygons/octagon.webp",
+        "en": "octagon",
+        "ja": "八角形",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/2_Polygons/nonagon.webp",
+        "en": "nonagon",
+        "ja": "九角形",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/2_Polygons/decagon.webp",
+        "en": "decagon",
+        "ja": "十角形",
+        "info1": "",
+        "info2": ""
+      }
    ],
     "group3": [
-        {
-          "src": "images/Geometry/3_Circles_&_Curves/1_circle.jpg",
-          "en": "circle",
-          "ja": "円",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/3_Circles_&_Curves/2_semicircle.jpg",
-          "en": "semicircle",
-          "ja": "半円",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/3_Circles_&_Curves/3_sector.jpg",
-          "en": "sector",
-          "ja": "扇形",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/3_Circles_&_Curves/4_quadrant.jpg",
-          "en": "quadrant",
-          "ja": "四分円",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/3_Circles_&_Curves/5_crescent.jpg",
-          "en": "crescent",
-          "ja": "三日月",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/3_Circles_&_Curves/6_oval.jpg",
-          "en": "oval",
-          "ja": "楕円形",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/3_Circles_&_Curves/7_ellipse.jpg",
-          "en": "ellipse",
-          "ja": "楕円",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/3_Circles_&_Curves/8_radius.jpg",
-          "en": "radius",
-          "ja": "半径",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/3_Circles_&_Curves/9_diameter.jpg",
-          "en": "diameter",
-          "ja": "直径",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/3_Circles_&_Curves/10_arc.jpg",
-          "en": "arc",
-          "ja": "弧",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/3_Circles_&_Curves/11_circumference.jpg",
-          "en": "circumference",
-          "ja": "円周",
-          "info1": "",
-          "info2": ""
-        }      
+      {
+        "src": "images/Geometry/3_Circles_&_Curves/circle.webp",
+        "en": "circle",
+        "ja": "円",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/3_Circles_&_Curves/semicircle.webp",
+        "en": "semicircle",
+        "ja": "半円",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/3_Circles_&_Curves/sector.webp",
+        "en": "sector",
+        "ja": "扇形",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/3_Circles_&_Curves/quadrant.webp",
+        "en": "quadrant",
+        "ja": "四分円",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/3_Circles_&_Curves/crescent.webp",
+        "en": "crescent",
+        "ja": "三日月",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/3_Circles_&_Curves/oval.webp",
+        "en": "oval",
+        "ja": "楕円形",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/3_Circles_&_Curves/ellipse.webp",
+        "en": "ellipse",
+        "ja": "楕円",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/3_Circles_&_Curves/radius.webp",
+        "en": "radius",
+        "ja": "半径",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/3_Circles_&_Curves/diameter.webp",
+        "en": "diameter",
+        "ja": "直径",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/3_Circles_&_Curves/arc.webp",
+        "en": "arc",
+        "ja": "弧",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/3_Circles_&_Curves/circumference.webp",
+        "en": "circumference",
+        "ja": "円周",
+        "info1": "",
+        "info2": ""
+      }      
     ],
     "group4": [
-        {
-          "src": "images/Geometry/4_Lines_&_Angles/1_line.jpg",
-          "en": "line",
-          "ja": "直線",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/4_Lines_&_Angles/2_line_segment.jpg",
-          "en": "line segment",
-          "ja": "線分",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/4_Lines_&_Angles/3_ray.jpg",
-          "en": "ray",
-          "ja": "半直線",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/4_Lines_&_Angles/4_horizontal_line.jpg",
-          "en": "horizontal line",
-          "ja": "横線",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/4_Lines_&_Angles/5_vertical_line.jpg",
-          "en": "vertical line",
-          "ja": "縦線",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/4_Lines_&_Angles/6_parallel_lines.jpg",
-          "en": "parallel lines",
-          "ja": "平行線",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/4_Lines_&_Angles/7_perpendicular_lines.jpg",
-          "en": "perpendicular lines",
-          "ja": "垂直な線",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/4_Lines_&_Angles/8_diagonal.jpg",
-          "en": "diagonal",
-          "ja": "対角線",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/4_Lines_&_Angles/9_side.jpg",
-          "en": "side",
-          "ja": "辺",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/4_Lines_&_Angles/10_base.jpg",
-          "en": "base",
-          "ja": "底辺",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/4_Lines_&_Angles/11_angle.jpg",
-          "en": "angle",
-          "ja": "角",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/4_Lines_&_Angles/12_right_angle.jpg",
-          "en": "right angle",
-          "ja": "直角",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/4_Lines_&_Angles/13_acute_angle.jpg",
-          "en": "acute angle",
-          "ja": "鋭角",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/4_Lines_&_Angles/14_obtuse_angle.jpg",
-          "en": "obtuse angle",
-          "ja": "鈍角",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/4_Lines_&_Angles/15_straight_angle.jpg",
-          "en": "straight angle",
-          "ja": "平角",
-          "info1": "",
-          "info2": ""
-        }
+      {
+        "src": "images/Geometry/4_Lines_&_Angles/line.webp",
+        "en": "line",
+        "ja": "直線",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/4_Lines_&_Angles/line_segment.webp",
+        "en": "line segment",
+        "ja": "線分",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/4_Lines_&_Angles/ray.webp",
+        "en": "ray",
+        "ja": "半直線",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/4_Lines_&_Angles/horizontal_line.webp",
+        "en": "horizontal line",
+        "ja": "横線",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/4_Lines_&_Angles/vertical_line.webp",
+        "en": "vertical line",
+        "ja": "縦線",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/4_Lines_&_Angles/parallel_lines.webp",
+        "en": "parallel lines",
+        "ja": "平行線",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/4_Lines_&_Angles/perpendicular_lines.webp",
+        "en": "perpendicular lines",
+        "ja": "垂直な線",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/4_Lines_&_Angles/diagonal.webp",
+        "en": "diagonal",
+        "ja": "対角線",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/4_Lines_&_Angles/side.webp",
+        "en": "side",
+        "ja": "辺",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/4_Lines_&_Angles/base.webp",
+        "en": "base",
+        "ja": "底辺",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/4_Lines_&_Angles/angle.webp",
+        "en": "angle",
+        "ja": "角",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/4_Lines_&_Angles/right_angle.webp",
+        "en": "right angle",
+        "ja": "直角",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/4_Lines_&_Angles/acute_angle.webp",
+        "en": "acute angle",
+        "ja": "鋭角",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/4_Lines_&_Angles/obtuse_angle.webp",
+        "en": "obtuse angle",
+        "ja": "鈍角",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/4_Lines_&_Angles/straight_angle.webp",
+        "en": "straight angle",
+        "ja": "平角",
+        "info1": "",
+        "info2": ""
+      }
     ],
     "group5": [
-        {
-          "src": "images/Geometry/5_Solids/1_sphere.jpg",
-          "en": "sphere",
-          "ja": "球",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/5_Solids/2_cube.jpg",
-          "en": "cube",
-          "ja": "立方体",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/5_Solids/3_rectangular_prism.jpg",
-          "en": "rectangular prism",
-          "ja": "直方体",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/5_Solids/4_cylinder.jpg",
-          "en": "cylinder",
-          "ja": "円柱",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/5_Solids/5_cone.jpg",
-          "en": "cone",
-          "ja": "円錐",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/5_Solids/6_triangular_prism.jpg",
-          "en": "triangular prism",
-          "ja": "三角柱",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/5_Solids/7_triangular_pyramid.jpg",
-          "en": "triangular pyramid",
-          "ja": "三角錐",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Geometry/5_Solids/8_hemisphere.jpg",
-          "en": "hemisphere",
-          "ja": "半球",
-          "info1": "",
-          "info2": ""
-        }
+      {
+        "src": "images/Geometry/5_Solids/sphere.webp",
+        "en": "sphere",
+        "ja": "球",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/5_Solids/cube.webp",
+        "en": "cube",
+        "ja": "立方体",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/5_Solids/rectangular_prism.webp",
+        "en": "rectangular prism",
+        "ja": "直方体",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/5_Solids/cylinder.webp",
+        "en": "cylinder",
+        "ja": "円柱",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/5_Solids/cone.webp",
+        "en": "cone",
+        "ja": "円錐",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/5_Solids/triangular_prism.webp",
+        "en": "triangular prism",
+        "ja": "三角柱",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/5_Solids/triangular_pyramid.webp",
+        "en": "triangular pyramid",
+        "ja": "三角錐",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Geometry/5_Solids/hemisphere.webp",
+        "en": "hemisphere",
+        "ja": "半球",
+        "info1": "",
+        "info2": ""
+      }
     ]
   }
 }

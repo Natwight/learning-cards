@@ -1,6 +1,6 @@
 {
   "groupLabels": {
-    "group1": "Group 1",
+    "group1": "Animals",
     "group2": "Group 2",
     "group3": "Group 3",
     "group4": "Group 4",
@@ -8,160 +8,160 @@
   },
   "groups": {
     "group1": [
-        { 
-          "src": "images/Animals/1_dog.jpg",
-          "en": "dog",
-          "ja": "犬",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/2_puppy.jpg",
-          "en": "puppy",
-          "ja": "子犬",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/3_cat.jpg",
-          "en": "cat",
-          "ja": "猫",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/4_kitten.jpg",
-          "en": "kitten",
-          "ja": "子猫",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/5_cow.jpg",
-          "en": "cow",
-          "ja": "牛 (雌牛)",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/6_calf.jpg",
-          "en": "calf",
-          "ja": "子牛",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/7_sheep.jpg",
-          "en": "sheep",
-          "ja": "羊",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/8_lamb.jpg",
-          "en": "lamb",
-          "ja": "子羊",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/9_horse.jpg",
-          "en": "horse",
-          "ja": "馬",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/10_foal.jpg",
-          "en": "foal",
-          "ja": "子馬",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/11_goat.jpg",
-          "en": "goat",
-          "ja": "ヤギ",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/12_kid.jpg",
-          "en": "kid",
-          "ja": "子ヤギ",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/13_deer.jpg",
-          "en": "deer",
-          "ja": "鹿",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/14_fawn.jpg",
-          "en": "fawn",
-          "ja": "小鹿",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/15_pig.jpg",
-          "en": "pig",
-          "ja": "豚",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/16_piglet.jpg",
-          "en": "piglet",
-          "ja": "子豚",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/17_chicken.jpg",
-          "en": "chicken",
-          "ja": "ニワトリ / 鶏 (総称)",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/18_chick.jpg",
-          "en": "chick",
-          "ja": "ひよこ",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/19_hen.jpg",
-          "en": "hen",
-          "ja": "雌鶏",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/20_rooster.jpg",
-          "en": "rooster",
-          "ja": "雄鶏",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/21_wild_boar.jpg",
-          "en": "wild boar",
-          "ja": "猪",
-          "info1": "",
-          "info2": ""
-        },
-        {
-          "src": "images/Animals/22_wild_boar_piglet.jpg",
-          "en": "wild boar piglet",
-          "ja": "子猪",
-          "info1": "",
-          "info2": ""
-        }        
+      { 
+        "src": "images/Animals/dog.webp",
+        "en": "dog",
+        "ja": "犬",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/puppy.webp",
+        "en": "puppy",
+        "ja": "子犬",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/cat.webp",
+        "en": "cat",
+        "ja": "猫",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/kitten.webp",
+        "en": "kitten",
+        "ja": "子猫",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/cow.webp",
+        "en": "cow",
+        "ja": "牛 (雌牛)",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/calf.webp",
+        "en": "calf",
+        "ja": "子牛",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/sheep.webp",
+        "en": "sheep",
+        "ja": "羊",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/lamb.webp",
+        "en": "lamb",
+        "ja": "子羊",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/horse.webp",
+        "en": "horse",
+        "ja": "馬",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/foal.webp",
+        "en": "foal",
+        "ja": "子馬",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/goat.webp",
+        "en": "goat",
+        "ja": "ヤギ",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/kid.webp",
+        "en": "kid",
+        "ja": "子ヤギ",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/deer.webp",
+        "en": "deer",
+        "ja": "鹿",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/fawn.webp",
+        "en": "fawn",
+        "ja": "小鹿",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/pig.webp",
+        "en": "pig",
+        "ja": "豚",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/piglet.webp",
+        "en": "piglet",
+        "ja": "子豚",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/chicken.webp",
+        "en": "chicken",
+        "ja": "ニワトリ / 鶏 (総称)",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/chick.webp",
+        "en": "chick",
+        "ja": "ひよこ",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/hen.webp",
+        "en": "hen",
+        "ja": "雌鶏",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/rooster.webp",
+        "en": "rooster",
+        "ja": "雄鶏",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/wild_boar.webp",
+        "en": "wild boar",
+        "ja": "猪",
+        "info1": "",
+        "info2": ""
+      },
+      {
+        "src": "images/Animals/wild_boar_piglet.webp",
+        "en": "wild boar piglet",
+        "ja": "子猪",
+        "info1": "",
+        "info2": ""
+      }        
     ],
     "group2": [],
     "group3": [],
